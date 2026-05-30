@@ -1,0 +1,3 @@
+$headers = @{"Content-Type" = "application/json"}
+$body = @{message = "What is 2 + 2?"} | ConvertTo-Json
+Invoke-WebRequest -Uri "http://localhost:8080/api/chat/message" -Method POST -Headers $headers -Body $body
